@@ -117,4 +117,16 @@ public class PermissionUtils {
         }
 
     }
+
+
+    public static boolean checkPermission(Context context, String str) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && ContextCompat.checkSelfPermission(context, str)
+                == PackageManager.PERMISSION_GRANTED) {
+            return true;
+        }
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
+            return true;
+        }
+        return false;
+    }
 }
