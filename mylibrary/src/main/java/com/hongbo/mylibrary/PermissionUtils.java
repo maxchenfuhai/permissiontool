@@ -94,21 +94,21 @@ public class PermissionUtils {
         }).show();
     }
 
-    public static void openLocationInfo(final BaseActivity baseActivity){
-        new AlertDialog.Builder(baseActivity).setTitle("提示").setMessage("此功能需要打开位置信息，是否跳转？")
-                .setPositiveButton("退出", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-
-                    }
-                }).setNegativeButton("授权", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Intent intent = new Intent("android.settings.LOCATION_SOURCE_SETTINGS");
-                baseActivity.startActivityForResult(intent, 100);
-            }
-        }).show();
-    }
+//    public static void openLocationInfo(final BaseActivity baseActivity){
+//        new AlertDialog.Builder(baseActivity).setTitle("提示").setMessage("此功能需要打开位置信息，是否跳转？")
+//                .setPositiveButton("退出", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//
+//                    }
+//                }).setNegativeButton("授权", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                Intent intent = new Intent("android.settings.LOCATION_SOURCE_SETTINGS");
+//                baseActivity.startActivityForResult(intent, 100);
+//            }
+//        }).show();
+//    }
     public static void checkPermissionAndListenAndrequstPermission(BaseActivity baseActivity) {
         if( baseActivity.targetPermission.size()>0){
             if (!checkPermissionAndListen(baseActivity)) {
