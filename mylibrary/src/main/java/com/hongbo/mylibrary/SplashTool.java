@@ -20,7 +20,7 @@ public abstract class SplashTool implements View.OnClickListener {
     }
 
     Dialog permissiondialog;
-    private void buildonPermissionsDialog(JsOnClickListenter jsOnClickListenter,int type){
+    public void buildonPermissionsDialog(JsOnClickListenter jsOnClickListenter,int type){
         int laoutid=R.layout.permission_layout_dialog;
         if(type==1){
             laoutid=R.layout.permission_layout_dialog1;
