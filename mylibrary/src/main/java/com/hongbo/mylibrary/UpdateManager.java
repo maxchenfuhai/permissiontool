@@ -10,6 +10,7 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -118,11 +119,13 @@ public class UpdateManager extends AsyncTask<Void, Integer, String> implements V
         context.startActivity(i);
     }
 
-    public void buildUpdateDialog(String verName, String updateContent) {
+    public void buildUpdateDialog(String verName, String updateContent,int logo) {
         View mFloatLayout = context.getLayoutInflater().inflate(R.layout.update_dialog, null);
         TextView updatelog = mFloatLayout.findViewById(R.id.updatelog);
         mFloatLayout.findViewById(R.id.btn_update).setOnClickListener(this);
         mFloatLayout.findViewById(R.id.btn_cancle).setOnClickListener(this);
+        ImageView imageViewLogo = mFloatLayout.findViewById(R.id.image_logo);
+        imageViewLogo.setImageResource(logo);
         head = mFloatLayout.findViewById(R.id.update_head);
         foot = mFloatLayout.findViewById(R.id.update_foot);
         TextView versionname = (TextView) mFloatLayout.findViewById(R.id.versionname);
