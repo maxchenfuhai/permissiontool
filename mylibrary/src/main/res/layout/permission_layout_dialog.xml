@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+       <LinearLayout
+           android:layout_width="300dp"
+           android:layout_height="match_parent"
+           android:background="@drawable/permission_shape1"
+           android:orientation="vertical">
+           <WebView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_margin="10dp"
+               android:id="@+id/webView"/>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:layout_marginBottom="10dp"
+               android:orientation="horizontal">
+               <TextView
+                   android:layout_width="100dp"
+                   android:layout_height="40dp"
+                   android:gravity="center"
+                   android:id="@+id/disagree"
+                   android:background="@drawable/permission_shape2"
+                   android:textColor="#07A8FA"
+                   android:text="不同意并退出"/>
+               <TextView
+                   android:layout_width="100dp"
+                   android:layout_marginLeft="20dp"
+                   android:text="同意"
+                   android:id="@+id/agree"
+                   android:background="@drawable/permission_shape3"
+                   android:gravity="center"
+                   android:textColor="#fff"
+                   android:layout_height="40dp" />
+           </LinearLayout>
+       </LinearLayout>
+</LinearLayout>
